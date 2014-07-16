@@ -68,8 +68,8 @@ describe("More specialized functions", function() {
   });
 
   it("some", function() {
-    expect(every([1, 2, 3, 4, 25, 6], function(x) {return x > 10;})).to.be(true);
-    expect(every([1, 2, 3, 4, 5, 6], function(x) {return x > 10;})).to.be(false);
+    expect(some([1, 2, 3, 4, 25, 6], function(x) {return x > 10;})).to.be(true);
+    expect(some([1, 2, 3, 4, 5, 6], function(x) {return x > 10;})).to.be(false);
   });
 
   it("unique", function() {
@@ -137,7 +137,7 @@ describe("Applied problems", function() {
       {name: "Linda", age: 56, children: ["Rick", "James", "Jose"]}
     ];
     var filtered = olderOrWithChildren(people);
-    assertArrayEquals(filtered, ["Fred", "Sal", "Linda"]);
+    assertArrayEquals(filtered, ["Fred", "Sal", "Rita", "Linda"]);
     checkIfFunctionalSolution(olderOrWithChildren);
   });
 });
